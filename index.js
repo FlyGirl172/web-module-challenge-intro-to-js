@@ -19,7 +19,13 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18
+if (votingAge >= 18) { 
+  console.log ('true')
 
+} else{
+  console.log ('false')
+}
 
 
 /*
@@ -33,7 +39,16 @@ Do the following:
 
    HINT: no function required
 */
-
+let firstThing = 2
+let secondThing = 4
+if (firstThing > secondThing) {
+console.log ('false')
+} else {
+  if (secondThing > firstThing) {
+    console.log ('true')
+  }
+}
+console.log (firstThing)
 
 
 
@@ -48,7 +63,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+const year = "1999"
+const numYear = Number(year)
+console.log(numYear)
 
 
 
@@ -64,7 +81,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
-
+console.log (multiply(3,10))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -77,10 +94,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
-
+console.log (dogYears(10))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,8 +146,28 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if (age < 1){
+    if (age <= .33){
+      return weight * .10
+    } else if (age <= .58){
+      return weight * .05
+    } else {
+      return weight * .04
+    }
+  } else {
+    if (weight <= 5 ) {
+      return weight * .05
+    } else if (weight <=10) {
+      return weight * .04
+      
+    } else if (weight <= 15) {
+      return weight * .03
+    } else {
+      return weight * .02
+    }
+      
+  }
 }
 
 
@@ -155,11 +192,109 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
-
-function game(user, computer){
-  /*add your code here*/
+let cp = Math.ceil(Math.random() * 3)
+if(cp === 1) {
+  cp = 'rock';
+} else if(cp === 2) {
+  cp = 'paper'
+} else {
+  cp = 'scissors'
 }
 
+function game(user, computer) {
+  if(user === computer) {
+    return "it's a tie";
+  } 
+  if (user === "rock") {
+    if (computer === "scissors") {
+      return "you win!";
+    } else {
+      return "you lose!";
+    }
+  }
+  
+  if(user === "paper") {
+    if(computer === "rock") {
+      return "you win!";
+    } else {
+      return "you lose!"
+    }
+  }
+  
+  if(user === "scissors") {
+    if(computer === "paper") {
+      return "you win!"
+    } else {
+      return "you lose!"
+    }
+  }
+}
+
+const computer1 = cp;
+
+console.log('cp1', computer1)
+console.log(game("paper", computer1));
+
+// let computerChoice = Math.ceil(Math.random()* 3)
+// if (computerChoice === 1) {
+//   computerChoice = 'rock'
+// } else if (computerChoice === 2) {
+//   computerChoice = 'paper'
+// } else {
+//   computerChoice = 'scissors'
+// }
+// console.log(computerChoice);
+
+// function game(user, computer) {
+//   if (user === computer) {
+//     return "It's a tie.";
+//   }
+//    if (user === "rock") {
+//     if (computer === "scissors") {
+//       return "you WIN!";
+//     } else {
+//       return "you LOSE!";
+//     }
+//    }
+//    if (user === "paper") {
+//     if (computer === "rock") {
+//       return "you WIN!";
+//     } else {
+//       return "you LOSE!"
+//     }
+//    }
+// }
+// const computer1 = computerChoice;
+// game (user, computer())
+// console.log('computerChoice1', computer1)
+// console.log(game("paper", computer1))
+//console.log(game ("rock", computerChoice))
+//console.log('computerChoice', computerChoice);
+  /* if (computerChoice === 0){
+     computerChoice = "rock" 
+     } else if (computerChoice === 1){
+       computerChoice = "paper"
+     } else if (computerChoice === 2){
+    computerChoice = "scissors"
+   } */
+//function game(user, computer){
+    
+    
+  
+ /* let result = 'You LOSE!'
+  if (tool === computerTool) {
+   result = 'It is a tie!'
+  } else if (tool === "rock" && computerTool === "scissors") {
+    result = 'You Win!'
+  } else if (tool === "paper" && computerTool === "rock") {
+    result = 'You Win!'
+  } else if (tool === "scissors" && computerTool === "paper"){
+    result = 'You Win!'
+   } console.log(result) */
+  //}
+  
+  // game()
+   
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -173,10 +308,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return (kilometers * .621371)
 }
-
+console.log (miles(3))
 
 
 //Task 5b - Centimeters to Feet
@@ -187,10 +322,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(Centimeters){
+  return  Centimeters / 30.48 
 }
-
+console.log(feet(156))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -206,11 +341,19 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
+function annoyingSong(x){
+      // x = x+1
+       return `${x} bottles of soda on the wall, ${x} bottles of soda, take one down pass it around ${x-1} bottles of soda on the wall`
+        //  console.log(annoyingSong(i))
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+     }
 
+     for (let i = 10; i >= 1; i--){
+     console.log(annoyingSong(i))
+      }
+
+
+//console.log("annoyingSong", annoyingSong(10))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -227,9 +370,22 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(grade){
+  if (grade >= 90) {
+    return 'you got an A'
+  } else if (grade >= 80) {
+    return 'you got a B' 
+  } else if (grade >= 70) {
+    return 'you got a C'
+  } else if (grade >= 60) {
+    return 'you got a D'
+  } else {
+    return 'you got an F'
+  }
+
 }
+console.log(grade(85))
+
 
 
 
@@ -246,10 +402,18 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(word) {
+  const vowel = ["a", "e", "i", "o", "u"]
+  const sepWord = word.split("")
+  let count = 0
+  for (let i = 0; i < sepWord.length; i++){
+    if (vowel.includes(sepWord[i])) {
+      count++
+    }
+  }
+  return count
 }
-
+console.log(vowelCounter('Romeo'))
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
